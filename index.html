@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="this is a simple book store app" />
+  <title>Book Store</title>
+  <link rel="stylesheet" href="css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#4caf50" />
+</head>
+
+<body>
+  <nav class="green" role="navigation">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo" id="logo-container">BookStore</a>
+      <a href="#" class="sidenav-trigger" data-target="nav-mobile">&#9776;</a>
+
+      <ul class="topnav right hide-on-med-and-down"></ul>
+      <ul class="sidenav" id="nav-mobile"></ul>
+    </div>
+  </nav>
+
+  <!-- content -->
+  <div id="content-container"></div>
+  <!-- end content -->
+
+  <!-- footer -->
+  <footer class="green page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Submission 1</h5>
+          <p class="grey-text text-lighten-4">
+            Ini adalah applikasi BookStore yang digunakan sebagai
+            <i>submission 1</i>.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2020 Copyright Fiqri khoirul m
+      </div>
+    </div>
+  </footer>
+  <!-- end footer -->
+
+  <script src="js/materialize.min.js"></script>
+  <script src="js/nav.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then(function () { })
+          .catch(function () {
+            console.log("Pendaftaran ServiceWorker gagal");
+          });
+      });
+    } else {
+      console.log("ServiceWorker belum didukung browser ini.");
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "BookStore",
+  "short_name": "BookStore",
+  "theme_color": "#4caf50",
+  "background_color": "#4caf50",
+  "display": "standalone",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "images/icons/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
